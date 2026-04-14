@@ -30,7 +30,7 @@ function moverIzquierda(){
 
 }
 function moverDerecha(){  
-    personajeX=personajeX-10;
+    personajeX=personajeX+10;
     actualizarPantalla();
 
 }
