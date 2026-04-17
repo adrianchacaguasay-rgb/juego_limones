@@ -76,7 +76,18 @@ function detectarAtrapado(){
             alert("ATRAPADO !!");  
             aparecerLimon();    
             puntaje=puntaje+1;
-            mostrarEnSpan("txtPuntaje",puntaje);     
+            mostrarEnSpan("txtPuntaje",puntaje);    
+            
+            if(puntaje==3){
+                cambiarVelocidad(150);
+            }
+            if(puntaje==6){
+                cambiarVelocidad(100);
+            }
+            if(puntaje==10){
+                alert("tienes limones haz limonada 😋😋");
+               
+            }
     }
 }
 function aparecerLimon(){
@@ -91,8 +102,12 @@ function detectarPiso(){
         mostrarEnSpan("txtVidas",vidas);
         if(vidas==0){
             alert("Game Over!!");   
-            clearInterval(intervalo);
+            
         }
         }
     }
+function cambiarVelocidad(nuevaVelocidad){
 
+    velocidadCaida = nuevaVelocidad
+    intervalo=setInterval(bajarLimon,velocidadCaida);
+}
