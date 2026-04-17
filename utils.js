@@ -7,8 +7,7 @@ function generarAleatorio(min,max){
     numeroEntero=numeroEntero+min;//5-600
     return numeroEntero
 }
-
-function probarAletorio(){
-    let aleatorio = generarAleatorio(10,80);    
-    console.log(aleatorio)
+function mostrarEnSpan(idSpan,valor){
+    let componente=document.getElementById(idSpan);   
+    componente.textContent=valor;
 }

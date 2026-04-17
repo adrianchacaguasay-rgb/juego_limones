@@ -10,6 +10,8 @@ let personajeX=canvas.width/2;
 let personajeY=canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE);
 let limonX=canvas.width/2;
 let limonY=5;
+let puntaje=0;
+let vidas=3;
 
 
 function iniciar(){
@@ -58,17 +60,21 @@ function dibujarLimon(){
 function bajarLimon(){  
     limonY=limonY+10;
     actualizarPantalla();
-    detectarColision();
+    detectarPiso();
+    detectarAtrapado();
 
 }
 
-function detectarColision(){
+function detectarAtrapado(){
         if( limonX+ANCHO_LIMON>personajeX &&    
             limonX<personajeX+ANCHO_PERSONAJE &&   
             limonY+ALTURA_LIMON>personajeY &&    
             limonY<personajeY+ALTURA_PERSONAJE){   
             alert("ATRAPADO !!");  
-            aparecerLimon();
+            aparecerLimon();    
+            puntaje=puntaje+1;
+            let componente=document.getElementById("txtPuntaje");   
+            componente.textContent=puntaje;
     }
 }
 function aparecerLimon(){
@@ -76,3 +82,12 @@ function aparecerLimon(){
    limonY= 0;
    actualizarPantalla();
 }
+function detectarPiso(){
+    if(limonY+ALTURA_LIMON == canvas.height-ALTURA_SUELO){
+        aparecerLimon();
+        vidas=vidas-1;  
+        let componente=document.getElementById("txtVidas");   
+        componente.textContent=vidas;
+
+        }
+    }
