@@ -1,31 +1,116 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
   text-align: center;
-  margin: 0;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Contenedor principal */
 .contenedor {
+  width: 90%;
   max-width: 800px;
-  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* Header */
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.autor {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+/* Canvas */
 canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
+  background: radial-gradient(circle, #1f2937, #020617);
+  border: 4px solid #38bdf8;
+  border-radius: 12px;
   margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
 }
 
+/* Panel de puntaje */
 .panel {
+  display: flex;
+  justify-content: space-around;
   margin: 20px 0;
 }
 
-.botones button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 16px;
+/* Tarjetas */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: 40%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.card span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* Botones */
+.botones {
+  margin-top: 15px;
+}
+
+.btn {
+  margin: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(56,189,248,0.5);
+}
+
+/* Botón reiniciar */
+.btn-reiniciar {
+  background: linear-gradient(135deg, #f43f5e, #be123c);
+}
+
+.btn-reiniciar:hover {
+  box-shadow: 0 5px 15px rgba(244,63,94,0.5);
 }
