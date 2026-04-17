@@ -5,16 +5,23 @@
   <title>Atrapar Limones</title>
   <link rel="stylesheet" href="limones.css"/>
   <script src="utils.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body onload="iniciar();">
 
   <div class="contenedor">
 
+    <!-- Imagen superior -->
+    <div class="imagen-top">
+      <img src="astro.png" alt="Jugador gamer">
+    </div>
+
     <header class="header">
       <h1>🍋 Atrapar Limones</h1>
-      <p class="subtitulo">Si del cielo te caen limones... ¡atrápalos!</p>
-      <h2 class="autor">Autor: Adrian Chacaguasay</h2>
+      <p class="subtitulo">"Si del cielo te caen limones... haz fortuna con ellos"</p>
+      <h2 class="autor">Por Adrian Chacaguasay</h2>
     </header>
 
     <section class="juego">
@@ -34,9 +41,9 @@
     </section>
 
     <section class="botones">
-      <button onclick="moverIzquierda();" class="btn">⬅ Izquierda</button>
-      <button onclick="moverDerecha();" class="btn">Derecha ➡</button>
-      <button class="btn btn-reiniciar">🔄 Reiniciar</button>
+      <button onclick="moverIzquierda();" class="btn">◀ Izquierda</button>
+      <button onclick="moverDerecha();" class="btn">Derecha ▶</button>
+      <button class="btn btn-reiniciar">⟲ Reiniciar</button>
     </section>
 
   </div>
