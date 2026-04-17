@@ -111,3 +111,18 @@ function cambiarVelocidad(nuevaVelocidad){
     velocidadCaida = nuevaVelocidad
     intervalo=setInterval(bajarLimon,velocidadCaida);
 }
+
+function reiniciar(){
+    clearInterval(intervalo);
+    puntaje = 0;
+    vidas = 3;
+    velocidadCaida = 200;
+    personajeX = canvas.width / 2;
+    limonX = canvas.width / 2;
+    limonY = 0;
+    mostrarEnSpan("txtPuntaje", puntaje);
+    mostrarEnSpan("txtVidas", vidas);
+    intervalo = setInterval(bajarLimon, velocidadCaida);
+    actualizarPantalla();
+}
+
